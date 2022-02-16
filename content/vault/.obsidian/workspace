@@ -1,0 +1,104 @@
+{
+  "main": {
+    "id": "ea845118189ca484",
+    "type": "split",
+    "children": [
+      {
+        "id": "0780a079bcde2f58",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Digital Garden.md",
+            "mode": "source",
+            "source": false
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "0adf69ef1a1c99b7",
+    "type": "split",
+    "children": [
+      {
+        "id": "13b59e46cdc85ee6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c07ddce9527b42be",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "1aea00deba72b1a9",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "tag:#digital-garden",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "28df589dd5d11c8c",
+    "type": "split",
+    "children": [
+      {
+        "id": "c80069eb07bf4137",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "d03b854fedaab911",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Digital Garden.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "0780a079bcde2f58",
+  "lastOpenFiles": [
+    "Digital Garden.md",
+    "Design OKR.md",
+    "Frustrating UX Pattern.md",
+    "My Obsidian Practices.md",
+    "Markdown.md",
+    "2021 Q4 Reflection & Progress.md",
+    "2021 Q3 Reflection & Progress.md",
+    "Progress Summarization.md",
+    "Permanent Notes.md",
+    "Obsidian Library Setup.md"
+  ]
+}
