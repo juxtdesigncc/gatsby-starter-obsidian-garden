@@ -87,6 +87,12 @@ const onCreateNode = ({ node, actions, getNode }) => {
     if (node.frontmatter.category) {
       const categorySlug = `/category/${kebabCase(node.frontmatter.category)}/`;
       createNodeField({ node, name: "categorySlug", value: categorySlug });
+    } else {
+      createNodeField({
+        node,
+        name: "categorySlug",
+        value: `/category/seedling/`,
+      });
     }
   }
 };

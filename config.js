@@ -1,14 +1,12 @@
-"use strict";
-
 module.exports = {
   url: "https://notes.desktopofsamuel.com",
   pathPrefix: "",
   title: "Obsidian Garden",
   subtitle:
     "Free Gatsby starter template to host your own digital garden for free, created by Obsidian.",
-  description: "Designed by Samuel W",
-  copyright: "© 版權所有",
-  lang: "zh",
+  description: "Designed by JUXT Design",
+  COPYRIGHT: "JUXT Design",
+  LOCALE: "zh",
   disqusShortname: "",
   postsPerPage: 6,
   googleAnalyticsId: "UA-114278308-6",
@@ -16,22 +14,32 @@ module.exports = {
   siteLogo: "static/profile.jpg",
   siteKeywords: "科技,設計,UI,UX,旅行,城市,香港",
   userTwitter: "@desktopofsamuel",
-  menu: [
+  MENU: [
     {
-      label: "所有文章",
+      label: "About",
+      path: "/about/",
+    },
+    {
+      label: "Topics",
+      path: "/topics/",
+    },
+  ],
+  FOOTER: [
+    {
+      label: "Home",
       path: "/",
     },
     {
-      label: "關於",
-      path: "/pages/now/",
+      label: "About",
+      path: "/about/",
     },
     {
-      label: "科技",
-      path: "/tech/",
+      label: "Changelog",
+      path: "/changelog/",
     },
     {
-      label: "旅遊",
-      path: "/travel/",
+      label: "Github",
+      path: "https://github.com/juxtdesigncc/gatsby-starter-obsidian-garden",
     },
   ],
   author: {

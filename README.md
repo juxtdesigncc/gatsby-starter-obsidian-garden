@@ -1,54 +1,24 @@
-<p align="center">
-  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
-    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
-  </a>
-</p>
 <h1 align="center">
-  Gatsby minimal starter
+  Gatsby Starter Obsidian Garden
 </h1>
 
-## 🚀 Quick start
+## Introduction
 
-1.  **Create a Gatsby site.**
+A Gatsby starter template created by [@juxtdesigncc](https:/juxtdesign.cc/?utm_source=obsidian-garden) to publish Obsidian vault for free with Gatsby Cloud.
 
-    Use the Gatsby CLI to create a new site, specifying the minimal starter.
+## Key Features
 
-    ```shell
-    # create a new Gatsby site using the minimal starter
-    npm init gatsby
-    ```
+- Publish your [Obsidian](https://obsidian.md/) knowledge base as a website for free using Gatsby
+- Support YAML (e.g. tags, publish) that also supported by Obsidian
 
-2.  **Start developing.**
+## Obsidian Preference
 
-    Navigate into your new site’s directory and start it up.
+Starting a new vault is highly recommended as Wikilinks options are not on by default. All previous notes using the `[[Wikilinks]]` will need to update. Here're a list of preferences:
 
-    ```shell
-    cd my-gatsby-site/
-    npm run develop
-    ```
+- Settings - Files & Links: Use [[Wikilinks]] option should be OFF. It will change the link format from `[[Wikilinks]]` to `[MarkdownLink]`.
+- Settings - Default location for new attachments: Should be set as 'In a folder specificed below' and create a folder named `media`, remember to update the config in `gatsby-source-filesystem` in `gatsby-config.js` if the media folder has changed.
+- By default, all pages will be published directly, but add frontmatter `publish: false` if you wish to hide certain notes.
 
-3.  **Open the code and start customizing!**
+### Why `gatsby-remark-relative-images` need to be not the latest version?
 
-    Your site is now running at http://localhost:8000!
-
-    Edit `src/pages/index.js` to see your site update in real-time!
-
-4.  **Learn more**
-
-    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
-
-## 🚀 Quick start (Gatsby Cloud)
-
-Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
-
-[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-minimal)
+https://stackoverflow.com/questions/63698552/gatsby-node-js-threw-an-error-while-running-the-oncreatenode-lifecycle-fmimag

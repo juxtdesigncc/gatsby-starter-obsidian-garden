@@ -9,8 +9,8 @@ const TagList = ({}) => {
   const tags = useTagsList();
   return (
     <Layout title={`Tags | ${title}`}>
-      <h1>Topics</h1>
-      <ul>
+      <h1 className="my-6">Topics</h1>
+      <ul className="list-disc">
         {tags.map((tag) => (
           <li key={tag.fieldValue}>
             <Link

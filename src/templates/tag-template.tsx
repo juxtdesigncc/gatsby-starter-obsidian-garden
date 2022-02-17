@@ -27,7 +27,9 @@ const TagTemplate = ({ data, pageContext }: Props) => {
   return (
     <Layout>
       <h1 className="capitalize">{tag}</h1>
-      <ListNote edges={edges} />
+      <div className="relative flex flex-col gap-6 my-10">
+        <ListNote edges={edges} />
+      </div>
     </Layout>
   );
 };

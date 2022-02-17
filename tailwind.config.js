@@ -20,34 +20,5 @@ module.exports = {
     },
     extend: {},
   },
-  plugins: [
-    require("@tailwindcss/typography"),
-    plugin(function ({ addBase, theme }) {
-      addBase({
-        html: {
-          letterSpacing: theme("letterSpacing.tighter"), // Increase tracking for Work Sans
-        },
-        h1: {
-          fontSize: theme("fontSize.4xl"),
-          fontWeight: theme("fontWeight.bold"),
-        },
-        h2: {
-          fontSize: theme("fontSize.2xl"),
-          fontWeight: theme("fontWeight.bold"),
-        },
-        h3: {
-          fontSize: theme("fontSize.xl"),
-        },
-        p: {
-          fontSize: theme("fontSize.lg"),
-        },
-        small: {
-          fontSize: theme("fontSize.sm"),
-        },
-        time: {
-          fontSize: theme("fontSize.sm"),
-        },
-      });
-    }),
-  ],
+  plugins: [require("@tailwindcss/typography")],
 };

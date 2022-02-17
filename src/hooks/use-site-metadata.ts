@@ -30,15 +30,10 @@ const useSiteMetadata = () => {
                 soundcloud
               }
             }
-            menu {
-              label
-              path
-            }
             url
             title
             subtitle
             description
-            copyright
             disqusShortname
           }
         }
