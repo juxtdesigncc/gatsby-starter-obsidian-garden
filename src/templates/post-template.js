@@ -5,11 +5,14 @@ import { MDXRenderer } from "gatsby-plugin-mdx";
 import Layout from "@/components/Layout";
 // import SEO from '@/components/seo';
 // import { useSiteMetadata } from "../hooks";
+import Link from "@/components/GatsbyLink";
+import kebabCase from "lodash.kebabcase";
 
 const PostTemplate = ({ data }) => {
   // const { title: siteTitle, subtitle: siteSubtitle } = useSiteMetadata();
   const postNode = data.mdx;
   const post = data.mdx.fields;
+  const { tags, category } = postNode.frontmatter;
   const postTitle = data.mdx.frontmatter.title;
   // const pageTitle = `${postTitle} - ${siteTitle}`;
 
@@ -23,6 +26,17 @@ const PostTemplate = ({ data }) => {
         <article className="my-6 prose prose-indigo lg:prose-xl">
           <MDXRenderer>{postNode.body}</MDXRenderer>
         </article>
+        <h5 className="uppercase font-bold mb-4">Topics</h5>
+        <ul className="flex flex-row gap-4">
+          {tags &&
+            tags.map((tag) => (
+              <li key={tag} className="px-2 py-1 bg-slate-100 rounded-full">
+                <Link to={`/tag/${kebabCase(tag)}`}>{tag}</Link>
+              </li>
+            ))}
+        </ul>
+        <h5 className="uppercase font-bold mb-4">Maturity</h5>
+        {post.stage}
       </Layout>
     </MdxProvider>
   );
@@ -31,29 +45,7 @@ const PostTemplate = ({ data }) => {
 export const query = graphql`
   query PostBySlug($slug: String!) {
     mdx(fields: { slug: { eq: $slug } }) {
-      id
-      body
-      excerpt(pruneLength: 300)
-      fields {
-        slug
-        title
-        date
-        categorySlug
-        # tagSlugs
-      }
-      frontmatter {
-        title
-        date
-        tags
-        category
-        # description
-        # socialImage {
-        #   publicURL
-        #   childImageSharp {
-        #     gatsbyImageData
-        #   }
-        # }
-      }
+      ...post
     }
   }
 `;

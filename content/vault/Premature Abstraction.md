@@ -1,3 +1,5 @@
+# Premature Abstraction
+
 Confused about or frustrated by premature abstraction? Want to know how to avoid it? In this article, we’ll walk through what premature abstraction is, how to recognize it, and how to evade it before it causes problems in your code.
 
 For those of you not familiar with premature abstraction, this term refers to adding abstractions to your code before it’s actually necessary, and before you fully understand the problem space and all the possible variations.

@@ -6,15 +6,17 @@ export const postFragment = graphql`
     body
     excerpt(pruneLength: 300)
     fields {
+      date
+      title
       slug
       tagSlugs
+      category
       categorySlug
+      stage
     }
     frontmatter {
       date
-      description
       tags
-      template
       title
       socialImage {
         publicURL
@@ -22,20 +24,23 @@ export const postFragment = graphql`
           gatsbyImageData(layout: FULL_WIDTH)
         }
       }
-      headings {
-        depth
-        value
-      }
-      tableOfContents
     }
+    headings {
+      depth
+      value
+    }
+    tableOfContents
   }
 
   fragment postList on Mdx {
     fields {
-      slug
-      title
       date
+      title
+      slug
+      category
       categorySlug
+      tagSlugs
+      stage
     }
     excerpt(pruneLength: 300)
     frontmatter {

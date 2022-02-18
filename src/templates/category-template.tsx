@@ -29,7 +29,11 @@ const CategoryTemplate = ({ data, pageContext }: Props) => {
 
   return (
     <Layout title={pageTitle}>
-      <h1>{category}</h1>
+      <div className="py-4 border-b border-slate-200">
+        <h1 className="capitalize inline-block mr-2 text-3xl md:text-6xl">
+          {category}
+        </h1>
+      </div>
       <ListNote edges={edges} />
       {/* {(hasPrevPage || hasNextPage) && (
         <Pagination

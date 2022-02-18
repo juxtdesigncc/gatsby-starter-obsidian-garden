@@ -1,7 +1,8 @@
 ---
+date: 2022-01-01
 tags:
   - SEO
-category: "evergreen"
+stage: "hello"
 ---
 
 # Google Lighthouse Score

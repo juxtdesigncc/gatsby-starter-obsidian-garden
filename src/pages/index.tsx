@@ -17,9 +17,14 @@ const IndexPage = ({ data, pageContext }) => {
     <main>
       <title>Home Page</title>
       <Layout>
-        <h1 className="text-black text-3xl md:text-5xl my-10 leading-12">
-          {siteSubtitle}
-        </h1>
+        <div className="my-10">
+          <span className="px-3 py-0.5 my-10 text-white text-xs font-semibold leading-5 uppercase tracking-wide bg-blue-500 rounded-full">
+            In Beta
+          </span>
+          <h1 className="text-black text-3xl md:text-5xl leading-12">
+            {siteSubtitle}
+          </h1>
+        </div>
         <h2 className="text-3xl text-slate-500 my-6">{siteDescription}</h2>
         <div className="relative grid grid-cols-12 gap-6">
           <ListNote edges={edges} />
@@ -43,25 +48,7 @@ export const query = graphql`
     ) {
       edges {
         node {
-          fields {
-            slug
-            title
-            date
-            categorySlug
-          }
-          excerpt(truncate: true, pruneLength: 300)
-          frontmatter {
-            title
-            date
-            category
-            tags
-            featured
-            socialImage {
-              childImageSharp {
-                gatsbyImageData
-              }
-            }
-          }
+          ...postList
         }
       }
     }

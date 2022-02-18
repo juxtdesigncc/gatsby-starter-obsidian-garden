@@ -9,7 +9,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "Digital Garden.md",
+            "file": "Changelog.md",
             "mode": "source",
             "source": false
           }
@@ -70,35 +70,46 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Digital Garden.md",
-                "collapseAll": false,
-                "extraContext": false,
+                "file": "Changelog.md",
+                "collapseAll": true,
+                "extraContext": true,
                 "sortOrder": "alphabetical",
                 "showSearch": false,
                 "searchQuery": "",
                 "backlinkCollapsed": false,
-                "unlinkedCollapsed": true
+                "unlinkedCollapsed": false
+              }
+            }
+          },
+          {
+            "id": "f1c9254260cc8797",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "active": "0780a079bcde2f58",
   "lastOpenFiles": [
-    "Digital Garden.md",
+    "Changelog.md",
+    "Getting Started.md",
     "Design OKR.md",
+    "Digital Garden.md",
     "Frustrating UX Pattern.md",
     "My Obsidian Practices.md",
     "Markdown.md",
     "2021 Q4 Reflection & Progress.md",
     "2021 Q3 Reflection & Progress.md",
-    "Progress Summarization.md",
-    "Permanent Notes.md",
-    "Obsidian Library Setup.md"
+    "Progress Summarization.md"
   ]
 }

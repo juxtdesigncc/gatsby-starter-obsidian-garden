@@ -1,6 +1,7 @@
 ---
 tags:
-  - OKR
+- digital-garden
+
 ---
 
 # Changelog

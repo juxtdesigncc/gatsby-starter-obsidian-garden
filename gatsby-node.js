@@ -26,13 +26,16 @@ exports.createSchemaCustomization = ({ actions }) => {
       publish: Boolean
       featured: Boolean
       socialImage: File @fileByRelativePath
+      stage: String
     }
     type Fields {
       title: String!
       slug: String!
       date: Date!
-      tagSlugs: String
+      tagSlugs: [String]
       categorySlug: String
+      category: String
+      stage: String
     }
   `;
 

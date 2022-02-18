@@ -1,7 +1,11 @@
 ---
 tags:
   - OKR
+category: "essays"
+stage: evergreen
 ---
+
+# Design OKR
 
 ![](https://miro.medium.com/max/1400/1*8Elr9emKBBy9EZqdU2F3jw.png)
 
@@ -100,3 +104,7 @@ If you read this far, thank you for reading!
 <cite>Atomic Habit by James Clear </cite>
 
 This quote shares the same way I feel when I practice Design OKR. As long as I'm incrementally better than myself yesterday, no matter how small the changes I make, it could have compound effect toward a success. Now that a big objective of my Design OKR has completed, I'm still searching for my next one, could be building my own product, earning side income, or for real to speak at design events. Before that happens, let me know what you think about this approach on [Twitter](https://twitter.com/desktopofsamuel) and I would love to answer any of your questions!
+
+## Source
+
+[https://desktopofsamuel.com/navigating-design-career-with-design-okrs/](https://desktopofsamuel.com/navigating-design-career-with-design-okrs/?ref=starter-obsidian)
