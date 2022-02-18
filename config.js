@@ -1,19 +1,19 @@
 module.exports = {
   url: "https://notes.desktopofsamuel.com",
   pathPrefix: "",
-  title: "Obsidian Garden",
-  subtitle:
+  TITLE: "Obsidian Garden",
+  SUBTITLE: "Gatsby Starter Made for Obsidian",
+  DESCRIPTION: "",
+  KEYWORDS: "Gatsby, Starter, Obsidian, Digial Garden",
+  HERO_TITLE:
     "Free Gatsby starter template to host your own digital garden for free, created by Obsidian.",
-  description: "Designed by JUXT Design",
+  HERO_SUBTITLE: "Designed by JUXT Design",
   COPYRIGHT: "JUXT Design",
-  LOCALE: "zh",
-  disqusShortname: "",
+  LOCALE: "en",
   postsPerPage: 6,
-  googleAnalyticsId: "UA-114278308-6",
   useKatex: false,
   siteLogo: "static/profile.jpg",
-  siteKeywords: "科技,設計,UI,UX,旅行,城市,香港",
-  userTwitter: "@desktopofsamuel",
+  userTwitter: "@juxtdesigncc",
   MENU: [
     {
       label: "About",
@@ -42,8 +42,8 @@ module.exports = {
       path: "https://github.com/juxtdesigncc/gatsby-starter-obsidian-garden",
     },
   ],
-  author: {
-    name: "Samuel W.",
+  AUTHOR: {
+    NAME: "JUXT Design",
     photo: "/profile.jpg",
     fullbio:
       "科技 | 設計 | 城市  <br/> <br/>   UI/UX 設計師，喜愛攝影，漫遊城市的不同角落。",

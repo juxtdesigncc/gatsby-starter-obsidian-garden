@@ -13,6 +13,7 @@ module.exports = {
     author: siteConfig.author,
   },
   plugins: [
+    "gatsby-plugin-react-helmet",
     "gatsby-plugin-postcss",
     {
       resolve: "gatsby-plugin-google-analytics",

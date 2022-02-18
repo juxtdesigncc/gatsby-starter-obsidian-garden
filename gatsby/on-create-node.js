@@ -94,7 +94,7 @@ const onCreateNode = ({ node, actions, getNode }) => {
         value: node.frontmatter.stage,
       });
     } else if (!stages.includes(node.frontmatter.stage)) {
-      console.error("no stage match");
+      console.error(`No stage match for ${node.fields.title}`);
       createNodeField({
         node,
         name: "stage",

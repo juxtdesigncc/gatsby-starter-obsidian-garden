@@ -2,6 +2,15 @@ import React, { ReactNode } from "react";
 import Header from "@/components/Header";
 import Container from "@/components/Container";
 import Footer from "@/components/Footer";
+import {
+  LOCALE,
+  COPYRIGHT,
+  AUTHOR,
+  KEYWORDS,
+  DESCRIPTION,
+  TITLE,
+} from "../../config";
+import { Helmet } from "react-helmet";
 
 const Layout: React.FC = ({
   children,
@@ -13,21 +22,37 @@ const Layout: React.FC = ({
   ...props
 }: Props) => {
   return (
-    <main>
+    <div>
       {full ? (
         <>
+          <Helmet htmlAttributes={{ lang: LOCALE }} title={TITLE}>
+            <meta name="title" content={TITLE} />
+            <meta name="description" content={DESCRIPTION} />
+            <meta name="keywords" content={KEYWORDS} />
+            <meta name="publisher" content={AUTHOR.NAME} />
+            <meta name="author" content={AUTHOR.NAME} />
+            <meta name="copyright" content={COPYRIGHT} />
+          </Helmet>
           <Header />
           {children}
           <Footer />
         </>
       ) : (
         <>
+          <Helmet htmlAttributes={{ lang: LOCALE }} title={TITLE}>
+            <meta name="title" content={TITLE} />
+            <meta name="description" content={DESCRIPTION} />
+            <meta name="keywords" content={KEYWORDS} />
+            <meta name="publisher" content={AUTHOR.NAME} />
+            <meta name="author" content={AUTHOR.NAME} />
+            <meta name="copyright" content={COPYRIGHT} />
+          </Helmet>
           <Header />
           <Container>{children}</Container>
           <Footer />
         </>
       )}
-    </main>
+    </div>
   );
 };
 
