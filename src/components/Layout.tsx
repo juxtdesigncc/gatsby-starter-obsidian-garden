@@ -1,6 +1,7 @@
 import React, { ReactNode } from "react";
 import Header from "@/components/Header";
-import Container from "./Container";
+import Container from "@/components/Container";
+import Footer from "@/components/Footer";
 
 const Layout: React.FC = ({
   children,
@@ -17,11 +18,13 @@ const Layout: React.FC = ({
         <>
           <Header />
           {children}
+          <Footer />
         </>
       ) : (
         <>
           <Header />
           <Container>{children}</Container>
+          <Footer />
         </>
       )}
     </main>

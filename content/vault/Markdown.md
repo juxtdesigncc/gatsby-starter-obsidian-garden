@@ -1,8 +1,9 @@
 ---
+date: 2021-01-01
 title: Markdown
 tags:
   - markdown
-category: "evergreen"
+stage: "evergreen"
 ---
 
 Markdown is a lightweight markup language for creating formatted text using a plain-text editor.

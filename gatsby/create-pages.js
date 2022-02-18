@@ -81,7 +81,7 @@ const createPages = async ({ graphql, actions }) => {
 
   await createTagsPages(graphql, actions);
   // await createPostsPages(graphql, actions);
-  // await createCategoriesPages(graphql, actions);
+  await createCategoriesPages(graphql, actions);
 };
 
 module.exports = createPages;

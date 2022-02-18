@@ -1,3 +1,35 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+html {
+  @apply tracking-tighter;
+}
+
+h1 {
+  @apply text-4xl font-bold;
+}
+
+h2 {
+  @apply text-2xl font-bold;
+}
+
+h3 {
+  @apply text-xl font-bold;
+}
+
+p {
+  @apply text-lg;
+}
+
+small {
+  @apply text-sm;
+}
+
+time {
+  @apply text-sm;
+}
+
+a {
+  @apply text-blue-400 hover:underline hover:text-blue-500 transition-all ease-in-out duration-200;
+}

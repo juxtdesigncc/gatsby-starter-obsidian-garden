@@ -84,9 +84,44 @@ const onCreateNode = ({ node, actions, getNode }) => {
       createNodeField({ node, name: "tagSlugs", value: tagSlugs });
     }
 
+    // ## Create a compulsory field called "Stage"
+    let stages = ["seedling", "budding", "evergreen"];
+
+    if (stages.includes(node.frontmatter.stage)) {
+      createNodeField({
+        node,
+        name: "stage",
+        value: node.frontmatter.stage,
+      });
+    } else if (!stages.includes(node.frontmatter.stage)) {
+      console.error("no stage match");
+      createNodeField({
+        node,
+        name: "stage",
+        value: `seedling`,
+      });
+    }
+
+    // ## Set a default category to "notes" unless provided
     if (node.frontmatter.category) {
       const categorySlug = `/category/${kebabCase(node.frontmatter.category)}/`;
       createNodeField({ node, name: "categorySlug", value: categorySlug });
+      createNodeField({
+        node,
+        name: "category",
+        value: node.frontmatter.category,
+      });
+    } else {
+      createNodeField({
+        node,
+        name: "categorySlug",
+        value: `/category/notes/`,
+      });
+      createNodeField({
+        node,
+        name: "category",
+        value: "notes",
+      });
     }
   }
 };

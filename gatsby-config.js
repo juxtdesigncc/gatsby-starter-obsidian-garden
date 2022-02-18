@@ -3,13 +3,12 @@ const siteConfig = require("./config.js");
 module.exports = {
   pathPrefix: siteConfig.pathPrefix,
   siteMetadata: {
+    siteUrl: siteConfig.url,
     url: siteConfig.url,
     title: siteConfig.title,
     subtitle: siteConfig.subtitle,
     description: siteConfig.description,
-    copyright: siteConfig.copyright,
     disqusShortname: siteConfig.disqusShortname,
-    menu: siteConfig.menu,
     category: siteConfig.category,
     author: siteConfig.author,
   },
@@ -19,6 +18,8 @@ module.exports = {
       resolve: "gatsby-plugin-google-analytics",
       options: {
         trackingId: "G-1DQ8GW3ZHX",
+        defer: true,
+        enableWebVitalsTracking: true,
       },
     },
     "gatsby-plugin-image",
