@@ -2,13 +2,13 @@ import React from "react";
 import Layout from "@/components/Layout";
 import kebabCase from "lodash.kebabcase";
 import { Link } from "gatsby";
-import { useSiteMetadata, useTagsList } from "../hooks";
+import { useTagsList } from "../hooks";
+import { SITE_TITLE } from "../../config";
 
 const TagList = ({}) => {
-  const { title, subtitle } = useSiteMetadata();
   const tags = useTagsList();
   return (
-    <Layout title={`Tags | ${title}`}>
+    <Layout title={`Tags | ${SITE_TITLE}`}>
       <h1 className="my-6">Topics</h1>
       <ul className="list-disc">
         {tags.map((tag) => (

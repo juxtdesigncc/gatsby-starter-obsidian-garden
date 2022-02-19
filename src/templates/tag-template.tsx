@@ -3,11 +3,10 @@ import { graphql } from "gatsby";
 import Layout from "@/components/Layout";
 import ListNote from "@/components/ListNote";
 import { PageContext, AllMdx } from "@/utils/type";
-import { useSiteMetadata } from "@/hooks";
+import { SITE_TITLE } from "../../config";
 import Container from "@/components/Container";
 
 const TagTemplate = ({ data, pageContext }: Props) => {
-  const { title: siteTitle } = useSiteMetadata();
   const { edges } = data.allMdx;
   const {
     tag,
@@ -21,11 +20,11 @@ const TagTemplate = ({ data, pageContext }: Props) => {
 
   const pageTitle =
     currentPage > 0
-      ? `所有關於"${tag}"的文章 - 第${currentPage}頁 - ${siteTitle}`
-      : `所有關於"${tag}"的文章 - ${siteTitle}`;
+      ? `所有關於"${tag}"的文章 - 第${currentPage}頁 - ${SITE_TITLE}`
+      : `所有關於"${tag}"的文章 - ${SITE_TITLE}}`;
 
   return (
-    <Layout>
+    <Layout title={pageTitle}>
       <div className="py-4 border-b border-slate-200">
         <h1 className="capitalize inline-block mr-2 text-3xl md:text-6xl">
           {tag}

@@ -21,12 +21,13 @@ const Layout: React.FC = ({
   full,
   ...props
 }: Props) => {
+  const pageTitle = title || TITLE;
   return (
     <div>
       {full ? (
         <>
-          <Helmet htmlAttributes={{ lang: LOCALE }} title={TITLE}>
-            <meta name="title" content={TITLE} />
+          <Helmet htmlAttributes={{ lang: LOCALE }} title={pageTitle}>
+            <meta name="title" content={pageTitle} />
             <meta name="description" content={DESCRIPTION} />
             <meta name="keywords" content={KEYWORDS} />
             <meta name="publisher" content={AUTHOR.NAME} />
@@ -39,8 +40,8 @@ const Layout: React.FC = ({
         </>
       ) : (
         <>
-          <Helmet htmlAttributes={{ lang: LOCALE }} title={TITLE}>
-            <meta name="title" content={TITLE} />
+          <Helmet htmlAttributes={{ lang: LOCALE }} title={pageTitle}>
+            <meta name="title" content={pageTitle} />
             <meta name="description" content={DESCRIPTION} />
             <meta name="keywords" content={KEYWORDS} />
             <meta name="publisher" content={AUTHOR.NAME} />

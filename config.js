@@ -1,9 +1,9 @@
 module.exports = {
   url: "https://notes.desktopofsamuel.com",
   pathPrefix: "",
-  TITLE: "Obsidian Garden",
-  SUBTITLE: "Gatsby Starter Made for Obsidian",
-  DESCRIPTION: "",
+  SITE_TITLE: "Obsidian Garden",
+  SITE_SUBTITLE: "Gatsby Starter Made for Obsidian",
+  SITE_DESCRIPTION: "",
   KEYWORDS: "Gatsby, Starter, Obsidian, Digial Garden",
   HERO_TITLE:
     "Free Gatsby starter template to host your own digital garden for free, created by Obsidian.",

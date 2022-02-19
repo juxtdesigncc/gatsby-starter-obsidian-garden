@@ -2,7 +2,7 @@ import Layout from "@/components/Layout";
 import React from "react";
 import ListNote from "@/components/ListNote";
 import { graphql } from "gatsby";
-import { useSiteMetadata } from "../hooks";
+import { SITE_TITLE } from "../../config";
 
 type Props = {
   data: AllMdx;
@@ -10,8 +10,6 @@ type Props = {
 };
 
 const CategoryTemplate = ({ data, pageContext }: Props) => {
-  const { title: siteTitle, subtitle: siteSubtitle } = useSiteMetadata();
-
   const { edges } = data.allMdx;
   const {
     category,
@@ -24,8 +22,8 @@ const CategoryTemplate = ({ data, pageContext }: Props) => {
   } = pageContext;
   const pageTitle =
     currentPage > 0
-      ? `${category} - Page ${currentPage} - ${siteTitle}`
-      : `${category} - ${siteTitle}`;
+      ? `${category} - Page ${currentPage} - ${SITE_TITLE}`
+      : `${category} - ${SITE_TITLE}`;
 
   return (
     <Layout title={pageTitle}>

@@ -4,12 +4,10 @@ import MdxProvider from "@/components/MDXProvider";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import Layout from "@/components/Layout";
 // import SEO from '@/components/seo';
-// import { useSiteMetadata } from "../hooks";
 import Link from "@/components/GatsbyLink";
 import kebabCase from "lodash.kebabcase";
 
 const PostTemplate = ({ data }) => {
-  // const { title: siteTitle, subtitle: siteSubtitle } = useSiteMetadata();
   const postNode = data.mdx;
   const post = data.mdx.fields;
   const { tags, category } = postNode.frontmatter;
