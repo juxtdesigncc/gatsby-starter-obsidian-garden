@@ -9,15 +9,17 @@ const TagList = ({}) => {
   const tags = useTagsList();
   return (
     <Layout title={`Tags | ${SITE_TITLE}`}>
-      <h1 className="my-6">Topics</h1>
-      <ul className="list-disc">
+      <div className="my-2 py-4 border-b border-slate-200">
+        <h1 className="mr-2 text-3xl md:text-6xl font-black">Topics</h1>
+      </div>
+      <ul className="list-disc mt-4">
         {tags.map((tag) => (
           <li key={tag.fieldValue}>
             <Link
               to={`/tag/${kebabCase(tag.fieldValue)}/`}
               className="capitalize"
             >
-              {tag.fieldValue} ({tag.totalCount})
+              {kebabCase(tag.fieldValue)} ({tag.totalCount})
             </Link>
           </li>
         ))}

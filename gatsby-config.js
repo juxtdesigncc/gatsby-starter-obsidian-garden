@@ -112,8 +112,8 @@ module.exports = {
         fonts: {
           google: [
             {
-              family: "Work Sans",
-              variants: ["400", "700"],
+              family: "Roboto Serif",
+              variants: ["400", "500", "900"],
               fontDisplay: "swap",
             },
             {

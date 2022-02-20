@@ -4,7 +4,7 @@ import Layout from "@/components/Layout";
 import ListNote from "@/components/ListNote";
 import { PageContext, AllMdx } from "@/utils/type";
 import { SITE_TITLE } from "../../config";
-import Container from "@/components/Container";
+import kebabCase from "lodash.kebabcase";
 
 const TagTemplate = ({ data, pageContext }: Props) => {
   const { edges } = data.allMdx;
@@ -20,14 +20,14 @@ const TagTemplate = ({ data, pageContext }: Props) => {
 
   const pageTitle =
     currentPage > 0
-      ? `所有關於"${tag}"的文章 - 第${currentPage}頁 - ${SITE_TITLE}`
-      : `所有關於"${tag}"的文章 - ${SITE_TITLE}}`;
+      ? `All posts tagged with ${tag} - Page ${currentPage} - ${SITE_TITLE}`
+      : `All posts tagged with ${tag} - ${SITE_TITLE}`;
 
   return (
     <Layout title={pageTitle}>
-      <div className="py-4 border-b border-slate-200">
-        <h1 className="capitalize inline-block mr-2 text-3xl md:text-6xl">
-          {tag}
+      <div className="my-2 py-4 border-b border-slate-200">
+        <h1 className="capitalize inline-block mr-2 text-5xl md:text-7xl font-black">
+          {kebabCase(tag)}
         </h1>
         <p className="inline-block text-sm">({edges.length})</p>
       </div>

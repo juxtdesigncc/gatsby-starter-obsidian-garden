@@ -21,7 +21,7 @@ const PostTemplate = ({ data }) => {
         <small className="text-sm font-bold uppercase tracking-tight">
           {post.date}
         </small>
-        <article className="my-6 prose prose-indigo lg:prose-xl">
+        <article className="my-6 prose prose-red lg:prose-xl">
           <MDXRenderer>{postNode.body}</MDXRenderer>
         </article>
         <h5 className="uppercase font-bold mb-4">Topics</h5>

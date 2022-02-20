@@ -12,14 +12,14 @@ const IndexPage = ({ data, pageContext }) => {
   return (
     <Layout>
       <div className="my-10">
-        <span className="px-3 py-0.5 my-10 text-white text-xs font-semibold leading-5 uppercase tracking-wide bg-blue-600 rounded-full">
+        <span className="px-3 py-1 text-black text-xs font-semibold uppercase font-mono tracking-wide leading-none bg-green-400 rounded-full">
           In Beta
         </span>
-        <h1 className="text-black text-3xl md:text-5xl leading-12">
+        <h1 className="text-black text-3xl mt-4 md:text-5xl leading-normal md:leading-snug transition-all ease-in-out">
           {HERO_TITLE}
         </h1>
       </div>
-      <h2 className="text-3xl text-slate-500 my-6">{HERO_SUBTITLE}</h2>
+      <h2 className="text-3xl text-slate-600 my-6">{HERO_SUBTITLE}</h2>
       <div className="relative grid grid-cols-12 gap-6">
         <ListNote edges={edges} />
       </div>
