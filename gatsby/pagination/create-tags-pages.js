@@ -8,7 +8,12 @@ module.exports = async (graphql, actions) => {
 
   const result = await graphql(`
     {
-      allMdx {
+      allMdx(
+        filter: {
+          frontmatter: { publish: { ne: false } }
+          fileAbsolutePath: { regex: "/vault/" }
+        }
+      ) {
         group(field: frontmatter___tags) {
           fieldValue
           totalCount

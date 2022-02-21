@@ -14,6 +14,7 @@ module.exports = {
   },
   plugins: [
     "gatsby-plugin-react-helmet",
+    "gatsby-plugin-sitemap",
     "gatsby-plugin-postcss",
     {
       resolve: `gatsby-plugin-google-gtag`,
