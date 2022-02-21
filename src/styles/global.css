@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 html {
-  @apply tracking-tighter;
+  @apply tracking-tighter text-slate-800;
 }
 
 h1 {
