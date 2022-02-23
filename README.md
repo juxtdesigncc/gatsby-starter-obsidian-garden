@@ -13,7 +13,7 @@
 
 A Gatsby starter template to publish [Obsidian](https://obsidian.md/) vault for free, created by [@juxtdesigncc](https:/juxtdesign.cc/?utm_source=obsidian-garden)
 
-<a href="">
+<a href="https://garden.gtsb.io">
   <img src="https://img.shields.io/badge/Demo-Gatsby%20Cloud-5b2c8a?style=for-the-badge" alt="Demo Website"/>
 </a>
 
