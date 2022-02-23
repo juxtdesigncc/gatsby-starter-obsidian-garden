@@ -7,8 +7,8 @@ import {
   COPYRIGHT,
   AUTHOR,
   KEYWORDS,
-  DESCRIPTION,
-  TITLE,
+  SITE_DESCRIPTION,
+  SITE_TITLE,
 } from "../../config";
 import { Helmet } from "react-helmet";
 
@@ -21,15 +21,17 @@ const Layout: React.FC = ({
   full,
   ...props
 }: Props) => {
-  const pageTitle = title || TITLE;
+  const pageTitle = title || SITE_TITLE;
+  const pageDescription = description || SITE_DESCRIPTION;
+  const pageKeywords = keywords || KEYWORDS;
   return (
     <div>
       {full ? (
         <>
           <Helmet htmlAttributes={{ lang: LOCALE }} title={pageTitle}>
             <meta name="title" content={pageTitle} />
-            <meta name="description" content={DESCRIPTION} />
-            <meta name="keywords" content={KEYWORDS} />
+            <meta name="description" content={pageDescription} />
+            <meta name="keywords" content={pageKeywords} />
             <meta name="publisher" content={AUTHOR.NAME} />
             <meta name="author" content={AUTHOR.NAME} />
             <meta name="copyright" content={COPYRIGHT} />
@@ -42,8 +44,8 @@ const Layout: React.FC = ({
         <>
           <Helmet htmlAttributes={{ lang: LOCALE }} title={pageTitle}>
             <meta name="title" content={pageTitle} />
-            <meta name="description" content={DESCRIPTION} />
-            <meta name="keywords" content={KEYWORDS} />
+            <meta name="description" content={pageDescription} />
+            <meta name="keywords" content={pageKeywords} />
             <meta name="publisher" content={AUTHOR.NAME} />
             <meta name="author" content={AUTHOR.NAME} />
             <meta name="copyright" content={COPYRIGHT} />
@@ -65,6 +67,6 @@ type Props = {
   description?: string;
   socialImage?: string;
   url?: string;
-  keywords: Array<string>;
+  keywords: string;
   full: boolean;
 };

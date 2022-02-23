@@ -10,7 +10,6 @@ module.exports = {
     description: siteConfig.description,
     disqusShortname: siteConfig.disqusShortname,
     category: siteConfig.category,
-    author: siteConfig.author,
   },
   plugins: [
     "gatsby-plugin-react-helmet",

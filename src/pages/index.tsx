@@ -3,7 +3,12 @@ import { PageProps, graphql } from "gatsby";
 import Header from "@/components/Header";
 import Container from "@/components/Container";
 import ListNote from "@/components/ListNote";
-import { HERO_TITLE, HERO_SUBTITLE } from "../../config";
+import {
+  HERO_TITLE,
+  HERO_SUBTITLE,
+  SITE_TITLE,
+  SITE_DESCRIPTION,
+} from "../../config";
 import Layout from "@/components/Layout";
 
 const IndexPage = ({ data, pageContext }) => {

@@ -4,7 +4,7 @@ const siteConfig = require("../../config.js");
 
 module.exports = async (graphql, actions) => {
   const { createPage } = actions;
-  const { postsPerPage } = siteConfig;
+  const { POST_PER_PAGE } = siteConfig;
 
   const result = await graphql(`
     {
@@ -23,7 +23,7 @@ module.exports = async (graphql, actions) => {
   `);
 
   result.data.allMdx.group.forEach((category) => {
-    const numPages = Math.ceil(category.totalCount / postsPerPage);
+    const numPages = Math.ceil(category.totalCount / POST_PER_PAGE);
     const categorySlug = `/category/${kebabCase(category.fieldValue)}`;
 
     for (let i = 0; i < numPages; i += 1) {
@@ -34,8 +34,8 @@ module.exports = async (graphql, actions) => {
           category: category.fieldValue,
           slug: categorySlug,
           currentPage: i,
-          postsLimit: postsPerPage,
-          postsOffset: i * postsPerPage,
+          postsLimit: POST_PER_PAGE,
+          postsOffset: i * POST_PER_PAGE,
           prevPagePath: i <= 1 ? categorySlug : `${categorySlug}/page/${i - 1}`,
           nextPagePath: `${categorySlug}/page/${i + 1}`,
           hasPrevPage: i !== 0,
