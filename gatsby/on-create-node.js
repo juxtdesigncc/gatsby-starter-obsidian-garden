@@ -75,8 +75,6 @@ const onCreateNode = ({ node, actions, getNode }) => {
       });
     }
 
-    // console.log(processedFrontmatterDate, processedFileDate);
-
     if (node.frontmatter.tags) {
       const tagSlugs = node.frontmatter.tags.map(
         (tag) => `/tag/${kebabCase(tag)}/`
@@ -84,25 +82,42 @@ const onCreateNode = ({ node, actions, getNode }) => {
       createNodeField({ node, name: "tagSlugs", value: tagSlugs });
     }
 
-    // ## Create a compulsory field called "Stage"
-    let stages = ["seedling", "budding", "evergreen"];
+    // create a compulsory field called "stage"
+    let stages = ["seedling", "budding", "evergreen"]; // defined list of stages
+    let defaultStage = "seedling";
 
+    // create node field if frontmatter's stage matches with the list
     if (stages.includes(node.frontmatter.stage)) {
       createNodeField({
         node,
         name: "stage",
         value: node.frontmatter.stage,
       });
-    } else if (!stages.includes(node.frontmatter.stage)) {
-      console.error("no stage match");
+    } else if (!node.frontmatter.stage) {
+      // apply default stage if frontmatter stage is null
       createNodeField({
         node,
         name: "stage",
-        value: `seedling`,
+        value: defaultStage,
+      });
+    } else if (!stages.includes(node.frontmatter.stage)) {
+      // Warning if frontmatter stage not match with defined list, apply default stage
+      console.warn(
+        `Stage unmatch for ${node.fields.title}, please edit the respective files soonm, applied default stage`
+      );
+      createNodeField({
+        node,
+        name: "stage",
+        value: defaultStage,
       });
     }
 
-    // ## Set a default category to "notes" unless provided
+    let defaultCategory = {
+      name: "notes",
+      slug: "/category/notes/",
+    };
+
+    // create a compulsory field called "category", default value is
     if (node.frontmatter.category) {
       const categorySlug = `/category/${kebabCase(node.frontmatter.category)}/`;
       createNodeField({ node, name: "categorySlug", value: categorySlug });
@@ -115,12 +130,12 @@ const onCreateNode = ({ node, actions, getNode }) => {
       createNodeField({
         node,
         name: "categorySlug",
-        value: `/category/notes/`,
+        value: defaultCategory.slug,
       });
       createNodeField({
         node,
         name: "category",
-        value: "notes",
+        value: defaultCategory.name,
       });
     }
   }

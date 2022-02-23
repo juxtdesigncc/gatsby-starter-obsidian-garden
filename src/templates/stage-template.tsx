@@ -9,10 +9,10 @@ type Props = {
   pageContext: PageContext;
 };
 
-const CategoryTemplate = ({ data, pageContext }: Props) => {
+const StageTemplate = ({ data, pageContext }: Props) => {
   const { edges } = data.allMdx;
   const {
-    category,
+    stage,
     slug,
     currentPage,
     prevPagePath,
@@ -22,14 +22,14 @@ const CategoryTemplate = ({ data, pageContext }: Props) => {
   } = pageContext;
   const pageTitle =
     currentPage > 0
-      ? `${category} - Page ${currentPage} - ${SITE_TITLE}`
-      : `${category} - ${SITE_TITLE}`;
+      ? `${stage} - Page ${currentPage} - ${SITE_TITLE}`
+      : `${stage} - ${SITE_TITLE}`;
 
   return (
     <Layout title={pageTitle}>
       <div className="my-2 py-4 border-b border-slate-200">
         <h1 className="capitalize inline-block mr-2 text-5xl md:text-7xl font-black">
-          {category}
+          {stage}
         </h1>
       </div>
       <ListNote edges={edges} />
@@ -46,11 +46,11 @@ const CategoryTemplate = ({ data, pageContext }: Props) => {
 };
 
 export const query = graphql`
-  query CategoryPage($category: String) {
+  query StagePage($stage: String) {
     allMdx(
       filter: {
         frontmatter: { publish: { ne: false } }
-        fields: { category: { eq: $category } }
+        fields: { stage: { eq: $stage } }
       }
       sort: { order: DESC, fields: fields___date }
     ) {
@@ -63,4 +63,4 @@ export const query = graphql`
   }
 `;
 
-export default CategoryTemplate;
+export default StageTemplate;

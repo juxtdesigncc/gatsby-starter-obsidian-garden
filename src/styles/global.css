@@ -3,19 +3,19 @@
 @tailwind utilities;
 
 html {
-  @apply tracking-tighter;
+  @apply tracking-tighter text-slate-800;
 }
 
 h1 {
-  @apply text-4xl font-bold;
+  @apply text-4xl text-black;
 }
 
 h2 {
-  @apply text-2xl font-bold;
+  @apply text-2xl font-medium text-black;
 }
 
 h3 {
-  @apply text-xl font-bold;
+  @apply text-xl font-medium text-black;
 }
 
 p {
@@ -31,5 +31,5 @@ time {
 }
 
 a {
-  @apply text-blue-400 hover:underline hover:text-blue-500 transition-all ease-in-out duration-200;
+  @apply text-slate-600 hover:underline hover:text-slate-800 transition-all ease-in-out duration-200;
 }

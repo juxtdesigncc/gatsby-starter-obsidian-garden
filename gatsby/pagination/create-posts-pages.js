@@ -19,8 +19,8 @@
 //     }
 //   `);
 
-//   const { postsPerPage } = siteConfig;
-//   const numPages = Math.ceil(result.data.allMdx.totalCount / postsPerPage);
+//   const {   POST_PER_PAGE } = siteConfig;
+//   const numPages = Math.ceil(result.data.allMdx.totalCount /   POST_PER_PAGE);
 
 //   for (let i = 0; i < numPages; i += 1) {
 //     createPage({
@@ -28,8 +28,8 @@
 //       component: path.resolve('./src/templates/index-template.tsx'),
 //       context: {
 //         currentPage: i,
-//         postsLimit: postsPerPage,
-//         postsOffset: i * postsPerPage,
+//         postsLimit:   POST_PER_PAGE,
+//         postsOffset: i *   POST_PER_PAGE,
 //         prevPagePath: i <= 1 ? '/' : `/page/${i - 1}`,
 //         nextPagePath: `/page/${i + 1}`,
 //         hasPrevPage: i !== 0,

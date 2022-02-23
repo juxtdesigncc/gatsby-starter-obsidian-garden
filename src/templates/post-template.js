@@ -4,12 +4,10 @@ import MdxProvider from "@/components/MDXProvider";
 import { MDXRenderer } from "gatsby-plugin-mdx";
 import Layout from "@/components/Layout";
 // import SEO from '@/components/seo';
-// import { useSiteMetadata } from "../hooks";
 import Link from "@/components/GatsbyLink";
 import kebabCase from "lodash.kebabcase";
 
 const PostTemplate = ({ data }) => {
-  // const { title: siteTitle, subtitle: siteSubtitle } = useSiteMetadata();
   const postNode = data.mdx;
   const post = data.mdx.fields;
   const { tags, category } = postNode.frontmatter;
@@ -23,7 +21,7 @@ const PostTemplate = ({ data }) => {
         <small className="text-sm font-bold uppercase tracking-tight">
           {post.date}
         </small>
-        <article className="my-6 prose prose-indigo lg:prose-xl">
+        <article className="my-6 prose prose-red lg:prose-xl">
           <MDXRenderer>{postNode.body}</MDXRenderer>
         </article>
         <h5 className="uppercase font-bold mb-4">Topics</h5>

@@ -1,6 +1,6 @@
 const kebabCase = require("lodash.kebabcase");
 const path = require("path");
-const siteConfig = require("../../config.js");
+const siteConfig = require("../../config");
 
 module.exports = async (graphql, actions) => {
   const { createPage } = actions;
@@ -14,7 +14,7 @@ module.exports = async (graphql, actions) => {
           fileAbsolutePath: { regex: "/vault/" }
         }
       ) {
-        group(field: fields___category) {
+        group(field: fields___stage) {
           fieldValue
           totalCount
         }
@@ -22,22 +22,22 @@ module.exports = async (graphql, actions) => {
     }
   `);
 
-  result.data.allMdx.group.forEach((category) => {
-    const numPages = Math.ceil(category.totalCount / POST_PER_PAGE);
-    const categorySlug = `/category/${kebabCase(category.fieldValue)}`;
+  result.data.allMdx.group.forEach((stage) => {
+    const numPages = Math.ceil(stage.totalCount / POST_PER_PAGE);
+    const stageSlug = `/stage/${kebabCase(stage.fieldValue)}`;
 
     for (let i = 0; i < numPages; i += 1) {
       createPage({
-        path: i === 0 ? `${categorySlug}/` : `${categorySlug}/page/${i}`,
-        component: path.resolve("./src/templates/category-template.tsx"),
+        path: i === 0 ? `${stageSlug}/` : `${stageSlug}/page/${i}`,
+        component: path.resolve("./src/templates/stage-template.tsx"),
         context: {
-          category: category.fieldValue,
-          slug: categorySlug,
+          stage: stage.fieldValue,
+          slug: stageSlug,
           currentPage: i,
           postsLimit: POST_PER_PAGE,
           postsOffset: i * POST_PER_PAGE,
-          prevPagePath: i <= 1 ? categorySlug : `${categorySlug}/page/${i - 1}`,
-          nextPagePath: `${categorySlug}/page/${i + 1}`,
+          prevPagePath: i <= 1 ? stageSlug : `${stageSlug}/page/${i - 1}`,
+          nextPagePath: `${stageSlug}/page/${i + 1}`,
           hasPrevPage: i !== 0,
           hasNextPage: i !== numPages - 1,
         },

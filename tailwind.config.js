@@ -5,7 +5,7 @@ module.exports = {
   theme: {
     fontFamily: {
       sans: [
-        "Work\\ Sans",
+        "Roboto\\ Serif",
         "-apple-system",
         "BlinkMacSystemFont",
         "Segoe\\ UI",
@@ -18,7 +18,32 @@ module.exports = {
       ],
       mono: ["Space Mono", "IBM Plex Mono", "monospace"],
     },
-    extend: {},
+    extend: {
+      typography: (theme) => ({
+        DEFAULT: {
+          css: {
+            color: theme("colors.gray.700"),
+            h2: {
+              fontWeight: "font-light",
+              color: theme("colors.gray.800"),
+            },
+            h3: {
+              fontWeight: "font-light",
+              color: theme("colors.gray.800"),
+            },
+            strong: {
+              color: theme("colors.gray.800"),
+            },
+            a: {
+              color: theme("colors.green.500"),
+              "&:hover": {
+                color: theme("colors.green.600"),
+              },
+            },
+          },
+        },
+      }),
+    },
   },
   plugins: [require("@tailwindcss/typography")],
 };

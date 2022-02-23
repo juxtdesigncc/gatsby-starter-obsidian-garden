@@ -11,7 +11,7 @@ export default function Footer() {
         <div className="border-t color-border-slate-200 flex flex-col-reverse md:flex-row gap-6 py-6 items-center">
           <div className="flex gap-4 items-center place-content-center">
             <GatsbyLink to="https://juxtdesign.cc">
-              <img src={Logo} className="w-10 hover:opacity-9" />
+              <img src={Logo} alt="Logo" className="w-10 hover:opacity-9" />
             </GatsbyLink>
             <p>
               © {new Date().getFullYear()} {COPYRIGHT}
@@ -22,7 +22,7 @@ export default function Footer() {
               <li key={item.label}>
                 <GatsbyLink
                   to={item.path}
-                  className="text-sm uppercase tracking-normal md:text-md"
+                  className="text-sm text-blue-600 uppercase tracking-normal md:text-md"
                 >
                   {item.label}
                 </GatsbyLink>
