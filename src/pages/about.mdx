@@ -2,29 +2,97 @@
 
 import Features from "@/components/Features";
 
-<span className="p-4 text-sm text-red-700 bg-red-200 rounded-lg">
-  This is a test for inline tailwind styles within Markdown files.
-</span>
+## 👋 Introduction
 
-## Introduction
+A Gatsby starter template to publish [Obsidian](https://obsidian.md/) vault for free, created by [@juxtdesigncc](https:/juxtdesign.cc/?utm_source=obsidian-garden)
 
-A Gatsby starter template created by [@juxtdesigncc](https:/juxtdesign.cc/?utm_source=obsidian-garden) to publish Obsidian vault for free with Gatsby Cloud.
+## 🚀 Quick Start
 
-## Key Features
+[![Deploy to Gatsby Cloud Now](https://camo.githubusercontent.com/fda7a8fe64d0351d9eb4aff4446b92368c7d5d9a55889fd16041eb393c5a697d/68747470733a2f2f7777772e6761747362796a732e636f6d2f6465706c6f796e6f772e737667)](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/juxtdesigncc/gatsby-starter-obsidian-garden)
+[![Deploy to Netlify Now](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/juxtdesigncc/gatsby-starter-obsidian-garden)
+
+## 💎 Key Features
+
+Obsidian currently offers Publish services ($20/month) with advance features. This starter is a free alternative for Obsidian users who want to publish their digital garden as a website. Obsidian can also serve as an on-device CMS to manage your content. (Cross-platform synchronization is also possible via Obsidian Sync / [Git](https://desktopofsamuel.com/how-to-sync-obsidian-vault-for-free-using-git/?utm_source=github&utm_medium=readme&utm_id=starter-obsidian))
 
 <Features />
 
 <!-- - Publish your [Obsidian](https://obsidian.md/) knowledge base as a website for free using [Gatsby](https://gatsbyjs.com/)
 - Support YAML (e.g. tags, publish) that are also supported by Obsidian -->
 
-## Obsidian Preference
+## 🚀 Getting Started
 
-Starting a new vault is highly recommended as Wikilinks options are not turned ON by default. All previous notes using the `[[Wikilinks]]` will need to update. Here're a list of preferences:
+### 1. Create a Gatsby site.
+
+Clone this template and navigate into the folder
+
+```node
+# Create a gatsby site with npx
+npx gatsby new project-name https://github.com/juxtdesigncc/gatsby-starter-obsidian-garden
+cd project-name
+
+# or
+git clone https://github.com/juxtdesigncc/gatsby-starter-obsidian-garden project-name
+cd project-name
+```
+
+### 2. Install dependencies.
+
+Install dependencies using yarn or npm
+
+```
+# Using yarn
+yarn install
+
+# Using npm
+npm install
+```
+
+### 3. Run development server
+
+Let's run the dev server to know it's working before updating any content or code.
+
+```
+gatsby develop
+```
+
+Your site is now running at http://localhost:8000!
+
+### 4. Open the code and start customizing
+
+Start customizing:
+
+- `/content/vault` stored all demo content. You can also use Obsidian to open the folder as a vault.
+- `/config.js` to customise the site metadata, top and footer navigation
+- `/gatsby` to customise all page generation in `gatsby-node.js`
+
+```
+code .
+```
+
+## 💻 Setup
+
+**Read before you use your own Obsidian vault or create a new one**
+
+Whether you wish to use your existing Obsidian vault or start a new vault, the following Obsidian preferences has to be set up correctly. Starting a new vault is highly recommended as these options are not on by default. All existing notes using the `[[Wikilinks]]` will need to update manually. Here're a list of preferences:
 
 - Settings - Files & Links: Use [[Wikilinks]] option should be OFF. It will change the link format from `[[Wikilinks]]` to `[MarkdownLink]`.
 - Settings - Default location for new attachments: Should be set as 'In a folder specificed below' and create a folder named `media`, remember to update the config in `gatsby-source-filesystem` in `gatsby-config.js` if the media folder has changed.
-- By default, all pages will be published directly, but add frontmatter `publish: false` if you wish to hide certain notes.
+- By default, all notes will be published , but add frontmatter `publish: false` to hide a note.
+
+Current example vault in `/content/vault` has already implemented all the aforementioned preference settings
 
 ### Why `gatsby-remark-relative-images` need to be not the latest version?
 
 https://stackoverflow.com/questions/63698552/gatsby-node-js-threw-an-error-while-running-the-oncreatenode-lifecycle-fmimag
+
+## 💪🏻 Support
+
+Thank you for trying this out! I'm still constantly shipping new updates to this project. Stay tuned for more news!
+
+You can support this project by:
+
+- Raise issues on [Github](https://github.com/juxtdesigncc/gatsby-starter-obsidian-garden/issues) if you catch any bugs
+- Submit a [PR](https://github.com/juxtdesigncc/gatsby-starter-obsidian-garden/pulls) if you discovered a solution
+- Share this project on Twitter and tag [me](https://twitter.com/juxtdesigncc)!
+- Give me a star on [Github](https://github.com/juxtdesigncc/gatsby-starter-obsidian-garden/)

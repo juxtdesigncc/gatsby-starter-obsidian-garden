@@ -22,7 +22,7 @@ export default function Footer() {
               <li key={item.label}>
                 <GatsbyLink
                   to={item.path}
-                  className="text-sm text-blue-600 uppercase tracking-normal md:text-md"
+                  className="text-sm text-green-700 uppercase tracking-normal md:text-md"
                 >
                   {item.label}
                 </GatsbyLink>

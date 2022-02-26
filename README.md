@@ -17,6 +17,11 @@ A Gatsby starter template to publish [Obsidian](https://obsidian.md/) vault for 
   <img src="https://img.shields.io/badge/Demo-Gatsby%20Cloud-5b2c8a?style=for-the-badge" alt="Demo Website"/>
 </a>
 
+## 🚀 Quick Start
+
+[![Deploy to Gatsby Cloud Now](https://camo.githubusercontent.com/fda7a8fe64d0351d9eb4aff4446b92368c7d5d9a55889fd16041eb393c5a697d/68747470733a2f2f7777772e6761747362796a732e636f6d2f6465706c6f796e6f772e737667)](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/juxtdesigncc/gatsby-starter-obsidian-garden)
+[![Deploy to Netlify Now](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/juxtdesigncc/gatsby-starter-obsidian-garden)
+
 ## 💎 Key Features
 
 Obsidian currently offers Publish services ($20/month) with advance features. This starter is a free alternative for Obsidian users who want to publish their digital garden as a website. Obsidian can also serve as an on-device CMS to manage your content. (Cross-platform synchronization is also possible via Obsidian Sync / [Git](https://desktopofsamuel.com/how-to-sync-obsidian-vault-for-free-using-git/?utm_source=github&utm_medium=readme&utm_id=starter-obsidian))
@@ -34,7 +39,12 @@ Obsidian currently offers Publish services ($20/month) with advance features. Th
 
 Clone this template and navigate into the folder
 
-```
+```node
+# Create a gatsby site with npx
+npx gatsby new project-name https://github.com/juxtdesigncc/gatsby-starter-obsidian-garden
+cd project-name
+
+# or
 git clone https://github.com/juxtdesigncc/gatsby-starter-obsidian-garden project-name
 cd project-name
 ```
@@ -43,13 +53,35 @@ cd project-name
 
 Install dependencies using yarn or npm
 
-`yarn install` or `npm install`
+```node
+# Using yarn
+yarn install
 
-### 3. Open the code and start customizing!
+# Using npm
+npm install
+```
 
-Running `gatsby develop` or `yarn run develop` to start the site
+### 3. Run development server
+
+Let's run the dev server to know it's working before updating any content or code.
+
+```
+gatsby develop
+```
 
 Your site is now running at http://localhost:8000!
+
+### 4. Open the code and start customizing
+
+Start customizing:
+
+- `/content/vault` stored all demo content. You can also use Obsidian to open the folder as a vault.
+- `/config.js` to customise the site metadata, top and footer navigation
+- `/gatsby` to customise all page generation in `gatsby-node.js`
+
+```
+code .
+```
 
 ---
 
